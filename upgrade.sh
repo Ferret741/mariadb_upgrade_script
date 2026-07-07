@@ -102,6 +102,7 @@ OPTIONMAP[flag_cleanup]='o'
 OPTIONMAP[flag_color]='c'
 OPTIONMAP[flag_colour]='c'
 OPTIONMAP[flag_confirm-upgrade]='y'
+OPTIONMAP[flag_yes]='y'
 OPTIONMAP[flag_debug]='v'
 OPTIONMAP[flag_force-backup]='f'
 OPTIONMAP[flag_help]='h'
@@ -1495,7 +1496,7 @@ function _database_backup_terminate_remaining_processes(){
 
     ## ---------------------------------------------------------------------------
     ## Gather a list of all remaining mysqldump processes from the remaining list
-    readarray -t remaining_pids < <(ps h --pid ${CONFIG[DATABASE_SERVICE_CURRENTLY_ENABLED]// /,} -wwwo lwp,command 2>/dev/null | awk '/mysqldump/&&/--dump-date/{print $1}')
+    readarray -t remaining_pids < <(ps h --pid ${CONFIG[DATABASE_SERVICE_CONNECTED_PIDS]// /,} -wwwo lwp,command 2>/dev/null | awk '/mysqldump/&&/--dump-date/{print $1}')
 
 
     ## ---------------------------------------------------------------------------
