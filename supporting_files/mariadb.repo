@@ -1,0 +1,54 @@
+## Website: https://mariadb.org/download/?t=repo-config&d=Red+Hat+Enterprise+Linux+7&v=10.6&r_m=rackspace
+## Website: https://mariadb.org/download/?t=repo-config&d=Red+Hat+Enterprise+Linux+7&v=10.6&r_m=gigenet
+## Repo content generated from the above
+
+
+
+## Additional
+# rpm.mariadb.org is a dynamic mirror if your preferred mirror goes offline. See https://mariadb.org/mirrorbits/ for details.
+# gpgkey = https://rpm.mariadb.org/RPM-GPG-KEY-MariaDB
+
+
+
+[mariadb_105]
+## This is a lie. The mirror for mariadb 10.5 exists in archives.
+name            = mariadb_105
+baseurl         = https://mirrors.gigenet.com/mariadb/yum/10.5/rhel/$releasever/$basearch
+gpgkey          = https://mirrors.gigenet.com/mariadb/yum/RPM-GPG-KEY-MariaDB
+module_hotfixes = 1
+gpgcheck        = 1
+enabled         = 0
+
+
+
+[mariadb_106]
+name            = MariaDB
+baseurl         = https://mirror.rackspace.com/mariadb/yum/10.6/rhel/$releasever/$basearch
+gpgkey          = https://mirror.rackspace.com/mariadb/yum/RPM-GPG-KEY-MariaDB
+module_hotfixes = 1
+gpgcheck        = 1
+enabled         = 0
+
+
+
+[mariadb_1011]
+name            = MariaDB
+baseurl         = https://mirror.rackspace.com/mariadb/yum/10.11/rhel/$releasever/$basearch
+gpgkey          = https://mirror.rackspace.com/mariadb/yum/RPM-GPG-KEY-MariaDB
+module_hotfixes = 1
+gpgcheck        = 1
+enabled         = 0
+
+
+
+[mariadb_114]
+name            = MariaDB
+baseurl         = https://mirror.rackspace.com/mariadb/yum/11.4/rhel/$releasever/$basearch
+gpgkey          = https://mirror.rackspace.com/mariadb/yum/RPM-GPG-KEY-MariaDB
+module_hotfixes = 1
+gpgcheck        = 1
+enabled         = 0
+
+
+
+## vim:syntax=dosini:ft=dosini:ai:et:ts=4:sts=4:sw=4:nu:
